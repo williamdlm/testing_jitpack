@@ -7,6 +7,6 @@ public class OnlyByeProcessor implements Processor {
 
 
     public void process(Exchange exchange) throws Exception {
-            exchange.getIn().setBody("Bye " + exchange);
+            exchange.getIn().setBody("Bye " + exchange.getIn().getBody());
     }
 }
