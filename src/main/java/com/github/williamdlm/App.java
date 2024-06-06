@@ -11,18 +11,18 @@ import org.apache.camel.impl.DefaultCamelContext;
 public class App {
     public static void main(String[] args) throws Exception {
         // create a CamelContext
-        try (CamelContext camel = new DefaultCamelContext()) {
-            CxfConfig cxfConfig = new CxfConfig();
-            camel.getRegistry().bind("introduceEndpoint", cxfConfig.introduceEndpoint());
-            // add routes which can be inlined as anonymous inner class
-            // (to keep all code in a single java file for this basic example)
-            camel.addRoutes(CxfRoute.createBasicRoute());
-
-            // start is not blocking
-            camel.start();
-
-            // so run for 10 seconds
-            Thread.sleep(100_000);
-        }
+//        try (CamelContext camel = new DefaultCamelContext()) {
+//            CxfConfig cxfConfig = new CxfConfig();
+//            camel.getRegistry().bind("introduceEndpoint", cxfConfig.introduceEndpoint());
+//            // add routes which can be inlined as anonymous inner class
+//            // (to keep all code in a single java file for this basic example)
+//            camel.addRoutes(CxfRoute.createBasicRoute());
+//
+//            // start is not blocking
+//            camel.start();
+//
+//            // so run for 10 seconds
+//            Thread.sleep(100_000);
+//        }
     }
 }
